@@ -34,7 +34,7 @@ function displayData(data) {
   const { value: joke } = JSON.parse(data);
   console.log(typeof joke);
   const jokeConv = joke.toLowerCase()
-  content.textContent = jokeConv.replace('chuck norris', 'balayya').toUpperCase();
+  content.textContent = jokeConv.replaceAll('chuck norris', 'balayya').toUpperCase();
   
   const random = Math.random() * 1000;
   setTimeout(() => {
